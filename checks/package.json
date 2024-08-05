@@ -1,0 +1,20 @@
+{
+  "name": "checks",
+  "description": "Checks functions for my app",
+  "version": "1.0.0",
+  "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
