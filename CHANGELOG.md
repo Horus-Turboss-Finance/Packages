@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.0.1...v1.0.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* **constraint:** Correction bug  minWidtgIntegerContraint ([349506c](https://github.com/Horus-Turboss-Finance/Packages/commit/349506c9da7b44ccd267fa1af4e3afe99dbae451))
+
 ### [1.0.1](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.0.0...v1.0.1) (2024-08-06)
 
 

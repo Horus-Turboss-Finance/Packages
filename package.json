@@ -1,7 +1,7 @@
 {
   "name": "packages",
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
     "prepare": "husky",
