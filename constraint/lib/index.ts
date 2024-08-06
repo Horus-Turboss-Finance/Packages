@@ -56,7 +56,9 @@ export function minWidthIntegerContraint (value : any, minLength : number): stri
     
     let ret = ""
     for(let i = 0; i < minLength; i++){
-        if(value + 1 < Math.pow(10, i)){
+        let tmp = value
+        if(tmp == 0) tmp ++
+        if(tmp < Math.pow(10, i)){
             ret += "0"
         }
     }
