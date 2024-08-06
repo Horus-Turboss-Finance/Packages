@@ -4,7 +4,8 @@
   "version": "1.0.1",
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
-    "prepare": "standard-version & husky",
+    "prepare": "husky",
+    "release": "standard-version",
     "build-all": "cd ./checks && npm run build && cd ../constraint && npm run build && cd ../dateformat && npm run build"
   },
   "dependencies": {
