@@ -1,11 +1,11 @@
 {
   "name": "packages",
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
     "prepare": "standard-version & husky",
-    "build-all" : "cd ./checks && npm run build && cd ../constraint && npm run build && cd ../dateformat && npm run build"
+    "build-all": "cd ./checks && npm run build && cd ../constraint && npm run build && cd ../dateformat && npm run build"
   },
   "dependencies": {
     "ajv": "^8.17.1",
