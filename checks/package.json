@@ -3,7 +3,6 @@
   "description": "Checks functions for my app",
   "version": "1.0.0",
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
-  "type": "module",
   "main": "dist/index",
   "types": "dist/index.d.ts",
   "scripts": {
