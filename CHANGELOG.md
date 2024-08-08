@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.0.3...v1.1.0) (2024-08-08)
+
+
+### Features
+
+* **checks:** ajout de la vérification port pour gestion dynamique ([253e0a0](https://github.com/Horus-Turboss-Finance/Packages/commit/253e0a07d613df7ca8dd594d448751f47129a97d))
+
 ### [1.0.3](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.0.2...v1.0.3) (2024-08-08)
 
 
