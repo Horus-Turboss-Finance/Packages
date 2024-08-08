@@ -63,7 +63,7 @@ export function minWidthIntegerContraint (value : any, minLength : number): stri
         }
     }
 
-    return `${ret}${value}`
+    return `${ret}${value.toString()}`
 }
 
 export function escapeHtmlContraint(text : string) {
