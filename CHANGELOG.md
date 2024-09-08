@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.1.0...v1.2.0) (2024-09-08)
+
+
+### Features
+
+* **signed-service:** ajout des fonction pour authentifier les services ([bf38a4c](https://github.com/Horus-Turboss-Finance/Packages/commit/bf38a4c19199cd9aa80e2d656c38e2c38d2c827e))
+
 ## [1.1.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.0.3...v1.1.0) (2024-08-08)
 
 
