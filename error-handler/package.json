@@ -1,0 +1,16 @@
+{
+  "name": "error-handler",
+  "version": "1.0.0",
+  "description": "Error handler for services",
+  "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
+}

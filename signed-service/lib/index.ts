@@ -13,7 +13,7 @@ loadEnv()
  * await CreateSignature(ServicesOptions.User)
  * @returns {string}
  */
-export async function CreateSignature (service : string) : Promise<string> {
+export function CreateSignature (service : string) : string {
   let services = Object.values(ServicesOptions)
   if(services.find(item => item === service) == undefined) throw new Error("Service inconnue")
 
@@ -23,7 +23,7 @@ export async function CreateSignature (service : string) : Promise<string> {
   const secondPartToken = Buffer.from(`${date}`).toString('base64url');
 
   const signature = `${firstPartToken}.${secondPartToken}.${env.SERVICE_SIGNATURE}`
-  let tokenEndPart = await bcrypt.hash(signature, 10)
+  let tokenEndPart = bcrypt.hashSync(signature, 10)
   tokenEndPart = Buffer.from(`${tokenEndPart}`).toString('base64url')
 
   return `${firstPartToken}.${secondPartToken}.${tokenEndPart}`
@@ -35,7 +35,7 @@ export async function CreateSignature (service : string) : Promise<string> {
  * @param token 
  * @returns {boolean}
  */
-export async function CompareSignature (token : string) : Promise<boolean> {
+export function CompareSignature (token : string) : boolean {
   const tokenParts = token.split(".")
     
   const tokenFirstPart = tokenParts[0]; // service
@@ -51,3 +51,5 @@ export async function CompareSignature (token : string) : Promise<boolean> {
   if(!isValid) return false
   return true
 } 
+
+export {ServicesOptions} from "./definitions"

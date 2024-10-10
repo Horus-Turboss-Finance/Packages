@@ -22,9 +22,6 @@
 - `bcryptjs` - Pour hasher correctement un mdp avec un sel [^2].
 - `typescript` - langage pour javascript à l'échelle de l'application (ajoutant des typages) [^3].
 
-> [!TIP]
-> Le troisième packet est intéressant et je vous invite à aller le voir
-
 ## Installation
 
 ```shell

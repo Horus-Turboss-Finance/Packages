@@ -10,7 +10,7 @@
     "release:patch": "standard-version --release-as patch",
     "release:major": "standard-version --release-as major",
     "postrelease": "git push --follow-tags",
-    "build-all": "cd ./checks && npm run build && cd ../constraint && npm run build && cd ../dateformat && npm run build && cd ../signed-service && npm run build"
+    "build-all": "cd ./checks && npm run build && cd ../constraint && npm run build && cd ../dateformat && npm run build && cd ../signed-service && npm run build && cd ../error-handler && npm run build"
   },
   "dependencies": {
     "ajv": "^8.17.1",

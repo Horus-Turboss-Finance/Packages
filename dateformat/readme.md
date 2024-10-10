@@ -7,9 +7,8 @@
 - [Packages](#packages)
 - [Installation](#installation)
 - [Documentation](#documentation)
-    - [DateFormator](#dateformator)
+    - [Timepiece](#timepiece)
       - [Paramètre d'entré :](#paramètre-dentré-)
-      - [Liste des format possible :](#liste-des-format-possible-)
       - [*Exemple de d'utilisation*](#exemple-de-dutilisation)
 
 
@@ -40,8 +39,8 @@ Or go to `package.json` file and add this :
 
 ## Documentation
 
-#### DateFormator
-Cette fonction a pour but d'afficher la date fournit en fonction du format choisit
+#### Timepiece
+Cette fonction a pour but d'afficher la date fournit en fonction du format choisit, la date et la langue
 
 Retourne : `String`
 
@@ -49,29 +48,18 @@ Retourne : `String`
 
 | Parameter | Type | Description | Défaut |
 | :-------- | :--: | :---------- | :--: |
-| `format` | `formatSelector` | Le format de sortie | &#9744; |
-| `DateSelector` | `number` | La date en miliseconde | `NOW` |
-
-##### Liste des format possible :
-| Name | Value | 
-| :-------- | :--: |
-| `relative` | `RELATIVE` |
-| `shortTime` | `SHORT_TIME` |
-| `longTime` | `LONG_TIME` |
-| `shortDate` | `SHORT_DATE` |
-| `longDate` | `LONG_DATE` |
-| `dateWithTime` | `DATE_WITH_TIME` |
-| `dateWithTimeAndDay` | `DATE_WITH_TIME_AND_DAY` |
+| `langue` | `string` | la langue souhaité | `fr` |
+| `date` | `number` | La date en miliseconde | `NOW` |
 
 ##### *Exemple de d'utilisation*
 ```js
-  let { DateFormator, formatSelector } = require('dateformat')
+  let { Timepiece } = require('dateformat')
   // ou pour les es modules //
   // import { DateFormator, formatSelector  } from "dateformat" //
 
   // ...Code existant... //
   Transaction.add({
-    Date : `${DateFormator(formatSelector.shortTime)}` // 15:08
+    Date : `${new Timepiece().shortTime()}` // 15:08
     //...//
   })
 ```
