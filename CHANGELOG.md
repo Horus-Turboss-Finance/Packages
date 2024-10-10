@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.2.0...v2.0.0) (2024-10-10)
+
+
+### Features
+
+* ajout de l'error handler et modification majeur de signed-service et dateformat ([c5dd0ba](https://github.com/Horus-Turboss-Finance/Packages/commit/c5dd0ba1b281772352066b396a5a9ffae253cb56))
+
 ## [1.2.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.1.0...v1.2.0) (2024-09-08)
 
 
