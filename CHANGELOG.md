@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.0.0...v2.1.0) (2024-10-10)
+
+
+### Features
+
+* ajout du package pour les logs ([60c57af](https://github.com/Horus-Turboss-Finance/Packages/commit/60c57af115d9fc8ff03d01881ab5a5c2cc58756d))
+
 ## [2.0.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v1.2.0...v2.0.0) (2024-10-10)
 
 
