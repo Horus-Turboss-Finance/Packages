@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.1.0...v2.1.1) (2024-10-11)
+
+
+### Features
+
+* **check:** ajout d'une fonction pour valider les ip ([987bbd4](https://github.com/Horus-Turboss-Finance/Packages/commit/987bbd47f57025ff677effb7fcbbb207206afe54))
+
 ## [2.1.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.0.0...v2.1.0) (2024-10-10)
 
 
