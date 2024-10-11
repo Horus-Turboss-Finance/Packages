@@ -9,6 +9,7 @@ import { Timepiece } from 'dateformat';
 export class log {
     private id : string
     private service : string
+    private pathLog : string
     private infoServ : Array<string>
     private getService : number
     private addService : number
@@ -16,9 +17,10 @@ export class log {
     private deleteService : number
     private errorServices : number
 
-    constructor (id : string, CE_Service : string) {
+    constructor (id : string, CE_Service : string, pathLog : string ) {
         this.id = id
         this.service = CE_Service
+        this.pathLog = pathLog
 
         this.getService = 0
         this.addService = 0
@@ -158,7 +160,7 @@ export class log {
                 ServiceInformation : this.infoServ
             }
 
-            fs.writeFile(path.resolve('src', 'log', todayFileName), JSON.stringify(fileContent) + ",", {flag : "a"}, (erro)=>{
+            fs.writeFile(this.pathLog, JSON.stringify(fileContent) + ",", {flag : "a"}, (erro)=>{
                 if(erro) console.log(erro)
             })
         }
@@ -169,7 +171,9 @@ export class log {
 }
 
 export const CE_Services = {
-    mongoose : "MONGOOSE",
-    app : "APP",
-    index : "INDEX",
+    inService : {
+        mongoose : "MONGOOSE",
+        app : "APP",
+        index : "INDEX",
+    },
 }

@@ -11,6 +11,8 @@
     "dateformat": "file:../dateformat"
   },
   "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
