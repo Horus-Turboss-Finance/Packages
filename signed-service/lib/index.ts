@@ -36,8 +36,10 @@ export function CreateSignature (service : string) : string {
  * @returns {boolean}
  */
 export function CompareSignature (token : string) : boolean {
+  if(!token) return false
   const tokenParts = token.split(".")
-    
+  
+  if(tokenParts[2] === undefined) return false
   const tokenFirstPart = tokenParts[0]; // service
   const tokenSecondPart = tokenParts[1]; // valid date
   let tokenEndPart = tokenParts[2];

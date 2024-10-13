@@ -152,15 +152,15 @@ export class log {
                     service : this.service
                 },
                 hour : new Timepiece().shortTime(),
-                "GET '/service'" : this.getService,
-                "POST '/service'" : this.addService,
-                "UP '/service'" : this.updateService,
-                "DELETE '/service'" : this.deleteService,
+                "GET '/service' " : this.getService,
+                "POST '/service' " : this.addService,
+                "UP '/service' " : this.updateService,
+                "DELETE '/service' " : this.deleteService,
                 errorReport : this.errorServices,
                 ServiceInformation : this.infoServ
             }
 
-            fs.writeFile(`${this.pathLog}/${todayFileName}`, JSON.stringify(fileContent) + ",", {flag : "a"}, (erro)=>{
+            fs.writeFile(`${this.pathLog}/${todayFileName}`, JSON.stringify(fileContent) + ",\n", {flag : "a"}, (erro)=>{
                 if(erro) console.log(erro)
             })
         }
