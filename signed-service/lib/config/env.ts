@@ -10,8 +10,7 @@ export const schema = {
 export let env: Env;
 
 export function loadEnv(): void {
-  console.log(resolve(__dirname, "./node_modules/signed-service/config/.env"))
   env = load(schema,{ 
-    path : resolve(__dirname, "./node_modules/signed-service/config/.env")
+    path : resolve(__dirname)
   });
 }
