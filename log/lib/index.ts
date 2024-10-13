@@ -160,7 +160,7 @@ export class log {
                 ServiceInformation : this.infoServ
             }
 
-            fs.writeFile(this.pathLog, JSON.stringify(fileContent) + ",", {flag : "a"}, (erro)=>{
+            fs.writeFile(`${this.pathLog}/${todayFileName}`, JSON.stringify(fileContent) + ",", {flag : "a"}, (erro)=>{
                 if(erro) console.log(erro)
             })
         }
