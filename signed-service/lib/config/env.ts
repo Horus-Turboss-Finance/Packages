@@ -11,6 +11,6 @@ export let env: Env;
 
 export function loadEnv(): void {
   env = load(schema,{ 
-    path : resolve(__dirname, "./config/.env")
+    path : resolve(__dirname, "./node_modules/signed-service/config/.env")
   });
 }
