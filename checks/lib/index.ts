@@ -72,3 +72,14 @@ export function isValidIP  (ip : any) {
     let Reg = new RegExp(/^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}/i);
     return Reg.test(ip);
 }
+
+export function isValidJSON (text : any) {
+    if(!stringCheck(text)) return false
+
+    try{
+        JSON.parse(text)
+        return true
+    }catch(e){
+        return false
+    }
+}
