@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.1.1...v2.1.2) (2024-10-16)
+
+
+### Bug Fixes
+
+* **error-handler:** correction fonction appels des erreurs ([3a4a54d](https://github.com/Horus-Turboss-Finance/Packages/commit/3a4a54d6e5c690d752a6d50750a8edb2a25c23fe))
+* **log:** correction bug writefile ([85b6382](https://github.com/Horus-Turboss-Finance/Packages/commit/85b63822977fddc8b2b9ad6923bd86e585ae0ede))
+* **log:** modification du nom de fichier de json à log ([58709b8](https://github.com/Horus-Turboss-Finance/Packages/commit/58709b8a5ff102caae78b6f411555f171ce27a2d))
+* **signed-service:** correction bug .env sur signed-service ([fcc57e3](https://github.com/Horus-Turboss-Finance/Packages/commit/fcc57e37f1dc492a1411a4e3e94462c352e7c358))
+* **signed-service:** correction bug .env sur signed-service ([04f44da](https://github.com/Horus-Turboss-Finance/Packages/commit/04f44daa6443452d69f63dbe2d5a210247ef39fc))
+* **signed-service:** correction bug .env sur signed-service ([e90b903](https://github.com/Horus-Turboss-Finance/Packages/commit/e90b903ef30c890878c6a2ba01382a535f28d244))
+* **signed-service:** correction bug .env sur signed-service ([89bcdbc](https://github.com/Horus-Turboss-Finance/Packages/commit/89bcdbcafa14c7c8b9738a600daf60ebf38fb2c6))
+* **signed-service:** correction bug compare signature if no token provided ([48ff794](https://github.com/Horus-Turboss-Finance/Packages/commit/48ff7945fa433b27e0881f9e2e2ae29f39dd2f12))
+
 ### [2.1.1](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.1.0...v2.1.1) (2024-10-11)
 
 
