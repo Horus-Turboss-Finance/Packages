@@ -144,7 +144,7 @@ export class log {
             const arrToday = today.split('/')
             today = arrToday.reverse().join('.')
 
-            const todayFileName = `${today}.json`
+            const todayFileName = `${today}.log`
 
             let fileContent = {
                 author : {
