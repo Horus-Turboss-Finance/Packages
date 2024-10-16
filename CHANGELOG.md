@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.1.2...v2.2.0) (2024-10-16)
+
+
+### Features
+
+* **check:** ajout de la fonction de validation si c'est un JSON ([d9fc835](https://github.com/Horus-Turboss-Finance/Packages/commit/d9fc8359fa279b8935caa073b3ec2ca98e40635d))
+
 ### [2.1.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.1.1...v2.1.2) (2024-10-16)
 
 
