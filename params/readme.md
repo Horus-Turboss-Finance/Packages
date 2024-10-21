@@ -42,6 +42,7 @@ Cette fonction a pour but de charger les variables d'environnement dans la varia
 |:--------------------------|:--------:|
 | WEBHOOK_ERROR_FOR_DISCORD | `String` |
 | PORT_ADRESSMANAGER        | `Number` |
+| IP_ADRESSMANAGER          | `String` |
 | URLDB                     | `String` |
 
 [^1]: [Url du dépot `ts-dotenv`](https://www.npmjs.com/package/ts-dotenv)

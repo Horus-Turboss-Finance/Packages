@@ -6,7 +6,8 @@ export type Env = EnvType<typeof schema>;
 const schema = {
   WEBHOOK_ERROR_FOR_DISCORD : String,
   URLDB: String,
-  PORT_ADRESSMANAGER: Number
+  PORT_ADRESSMANAGER: Number,
+  IP_ADRESSMANAGER: String
 };
 
 export let env: Env;
