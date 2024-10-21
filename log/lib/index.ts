@@ -1,8 +1,9 @@
 import * as fs from "fs";
 import axios from "axios";
-import * as path from "path";
 import { Timepiece } from 'dateformat';
+import { loadEnv, env } from "params"
 
+loadEnv()
 /*
     log inter service
 */
@@ -52,7 +53,7 @@ export class log {
             description = err.message
         }
 
-        axios.post('https://discord.com/api/webhooks/1293218634738569281/cmWXn9TraKhBOE035HPmzJqWY6rq_83216KkE_r_a7nG9uGOWtQr9h5DRyFAxczpfbC8', {
+        axios.post(env.WEBHOOK_ERROR_FOR_DISCORD, {
             embeds: [{
                 color : 984148,
 
@@ -98,7 +99,7 @@ export class log {
             description = "Error Message : " + err.message + '\nService : ' + service
         }
 
-        axios.post('https://discord.com/api/webhooks/1293218634738569281/cmWXn9TraKhBOE035HPmzJqWY6rq_83216KkE_r_a7nG9uGOWtQr9h5DRyFAxczpfbC8', {
+        axios.post(env.WEBHOOK_ERROR_FOR_DISCORD, {
             embeds: [{
                 timestamp: new Date().toISOString(),
                 color : 984148,

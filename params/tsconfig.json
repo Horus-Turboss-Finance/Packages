@@ -1,17 +1,9 @@
 {
   "compilerOptions": {
-    "preserveConstEnums": true,
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
+    "target": "ESNext",
     "module": "CommonJS",
-    "target": "ES2022",
-    "outDir": "dist",
+    "declaration": true,
+    "outDir": "./dist",
     "strict": true,
-  },
-  "include": [
-    "src/**/*"
-, "commitlint.config.js"  ],
-  "exclude": [
-      "node_modules"
-  ]
+  }
 }

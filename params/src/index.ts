@@ -1,7 +1,7 @@
 import { EnvType, load } from 'ts-dotenv';
 import { resolve } from "path"
 
-export type Env = EnvType<typeof schema>;
+type Env = EnvType<typeof schema>;
 
 const schema = {
   WEBHOOK_ERROR_FOR_DISCORD : String,
