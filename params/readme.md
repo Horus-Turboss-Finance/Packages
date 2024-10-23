@@ -41,9 +41,13 @@ Cette fonction a pour but de charger les variables d'environnement dans la varia
 | Titre                     | Type     |
 |:--------------------------|:--------:|
 | WEBHOOK_ERROR_FOR_DISCORD | `String` |
+| IP_SERVICE_WHITELIST      | `String` |
 | PORT_ADRESSMANAGER        | `Number` |
 | IP_ADRESSMANAGER          | `String` |
 | URLDB                     | `String` |
+
+> [!NOTE] 
+> IP_SERVICE_WHITELIST est une suite d'ip délimité par un ";", pour récupérer un tableau éxécutable, il faut donc faire un `env.IP_SERVICE_WHITELIST.split(';')`
 
 [^1]: [Url du dépot `ts-dotenv`](https://www.npmjs.com/package/ts-dotenv)
 [^2]: [Url du dépot `typescript`](https://www.npmjs.com/package/typescript)

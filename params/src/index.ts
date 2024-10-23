@@ -7,7 +7,8 @@ const schema = {
   WEBHOOK_ERROR_FOR_DISCORD : String,
   URLDB: String,
   PORT_ADRESSMANAGER: Number,
-  IP_ADRESSMANAGER: String
+  IP_ADRESSMANAGER: String,
+  IP_SERVICE_WHITELIST : String
 };
 
 export let env: Env;
