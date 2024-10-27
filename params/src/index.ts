@@ -12,6 +12,7 @@ const schema = {
 };
 
 export let env: Env;
+export let serviceName = ["MAIL", "UTILISATEUR", "ADRESSADMIN"]
 
 export function loadEnv(): void {
   env = load(schema,{ 
