@@ -8,7 +8,6 @@ loadEnv()
     log inter service
 */
 export class log {
-    private id : string
     private service : string
     private pathLog : string
     private infoServ : Array<string>
@@ -18,8 +17,7 @@ export class log {
     private deleteService : number
     private errorServices : number
 
-    constructor (id : string, CE_Service : string, pathLog : string ) {
-        this.id = id
+    constructor (CE_Service : string, pathLog : string ) {
         this.service = CE_Service
         this.pathLog = pathLog
 
@@ -57,7 +55,7 @@ export class log {
             embeds: [{
                 color : 984148,
 
-                title : `[WARNING ERROR - ${this.service}:${this.id}]`,
+                title : `[WARNING ERROR - ${this.service}]`,
                 fields : [
                     {
                         name : "Methods",
@@ -149,7 +147,6 @@ export class log {
 
             let fileContent = {
                 author : {
-                    id : this.id,
                     service : this.service
                 },
                 hour : new Timepiece().shortTime(),

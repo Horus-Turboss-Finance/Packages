@@ -79,3 +79,18 @@ export function escapeHtmlContraint(text : string) {
         return `${map[m]}`
     });
 }
+
+
+/**
+ * Function qui permet de formater les réponses au erreurs du validator de mongoose
+ * @param message {string} - Le message de base (err.errors.property.message)
+ * @param value {any} - La donnée envoyé par l'utilisateur (err.errors.property.value)
+ * @param property {string} - la valeur concerné (err.errors.property.path)
+ * @param kindValueForProperty {string} - le type de valeur qui aurait dû être (err.errors.property.type)
+ * @returns string
+ */
+export function mongooseMessageErrorFormator (message : string, value : any, property : string, kindValueForProperty : string) {
+    if(!message.startsWith('Validator')) return message;
+
+    return `${property} should be a ${kindValueForProperty}, got "${value}"`
+}
