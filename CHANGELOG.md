@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.3.0...v2.5.0) (2024-10-27)
+
+
+### Features
+
+* **params:** ajout de l'ip de l'adress-manager dans les env ([ffcd1c2](https://github.com/Horus-Turboss-Finance/Packages/commit/ffcd1c21ff4a159cf23f0650e07a0d63736edf7b))
+* **params:** ajout des ip white liste pour filtrer les requêtes ne provenant pas de l'application ([51a5312](https://github.com/Horus-Turboss-Finance/Packages/commit/51a5312129ec954076257d42c6a528f57e39fba5))
+
+
+### Bug Fixes
+
+* **log & params:** modification des logs dans params et modif de compilateur ts dans params ([09d5b6d](https://github.com/Horus-Turboss-Finance/Packages/commit/09d5b6d45a9f8683b0c9178092872925c966306c))
+* problème lors du commit ([539fe85](https://github.com/Horus-Turboss-Finance/Packages/commit/539fe85da39eccbe50ab5616fc46fb083d35a253))
+
 ## [2.4.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v2.3.0...v2.4.0) (2024-10-27)
 
 
