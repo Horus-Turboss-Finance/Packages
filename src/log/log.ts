@@ -1,13 +1,13 @@
 import * as fs from "fs";
 import axios from "axios";
-import Timepiece from '../date/date';
+import { Timepiece } from '../date/date';
 import { loadEnv, env } from "../params/params"
 
 loadEnv()
 /*
     log inter service
 */
-export default class {
+export class log {
     private service : string
     private pathLog : string
     private infoServ : Array<string>

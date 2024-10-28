@@ -131,7 +131,7 @@ let formatTrad = {
 //-----------------------------------//
 
 
-export default class {
+export class Timepiece {
     private lang : string 
     private now : number
     private day : number
