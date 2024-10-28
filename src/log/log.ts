@@ -1,13 +1,13 @@
 import * as fs from "fs";
 import axios from "axios";
-import { Timepiece } from 'dateformat';
-import { loadEnv, env } from "params"
+import Timepiece from '../date/index';
+import { loadEnv, env } from "../params/params"
 
 loadEnv()
 /*
     log inter service
 */
-export class log {
+export default class {
     private service : string
     private pathLog : string
     private infoServ : Array<string>
@@ -166,12 +166,4 @@ export class log {
         // Routines toutes les 30 mins
         setTimeout(() => {this.RoutineLogs()}, 1800000);
     }
-}
-
-export const CE_Services = {
-    inService : {
-        mongoose : "MONGOOSE",
-        app : "APP",
-        index : "INDEX",
-    },
 }

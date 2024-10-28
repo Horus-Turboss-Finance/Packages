@@ -12,12 +12,20 @@ const schema = {
 };
 
 export let env: Env;
-export let serviceName = ["MAIL", "UTILISATEUR", "ADRESSADMIN"]
-export let serviceObj = {
-  api : "API",
-  mail : "MAIL",
-  adress : "ADRESSADMIN",
-  utilisateur : "UTILISATEUR",
+export let serviceName = {
+  array : ["API", "MAIL", "UTILISATEUR", "ADRESSADMIN"],
+  object : {
+    api : "API",
+    mail : "MAIL",
+    adress : "ADRESSADMIN",
+    utilisateur : "UTILISATEUR",
+  }
+}
+
+export let inAppServiceName = {
+  mongoose : "MONGOOSE",
+  app : "APP",
+  index : "INDEX",
 }
 
 export function loadEnv(): void {

@@ -1,4 +1,4 @@
-export class ResponseException extends Error {
+export default class extends Error {
   private reason: string;
   private status: number;
   private title: string;
