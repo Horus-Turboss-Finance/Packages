@@ -14,6 +14,7 @@ const schema = {
 export let env: Env;
 export let serviceName = ["MAIL", "UTILISATEUR", "ADRESSADMIN"]
 export let serviceObj = {
+  api : "API",
   mail : "MAIL",
   adress : "ADRESSADMIN",
   utilisateur : "UTILISATEUR",
