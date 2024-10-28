@@ -12,7 +12,7 @@
     "release:major": "standard-version --release-as major && npm run postrelease",
     "postrelease": "git push --follow-tags",
     "build": "tsc",
-    "postinstall": "npm run build"
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
