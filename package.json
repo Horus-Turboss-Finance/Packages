@@ -2,7 +2,7 @@
   "name": "packages",
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
   "version": "3.0.4",
-  "main": "/dist/index.js",
+  "main": "./dist/index.js",
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
     "prepare": "husky",
@@ -11,7 +11,8 @@
     "release:minor": "standard-version --release-as minor && npm run postrelease",
     "release:major": "standard-version --release-as major && npm run postrelease",
     "postrelease": "git push --follow-tags",
-    "build": "tsc"
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
