@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.4](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.0.3...v3.0.4) (2024-10-28)
+
+
+### Bug Fixes
+
+* changement des appels ([6b6d9da](https://github.com/Horus-Turboss-Finance/Packages/commit/6b6d9da133938dddca2eca04d196cd7a37f26e75))
+* correction du package.json ([82e028b](https://github.com/Horus-Turboss-Finance/Packages/commit/82e028bb1357f00e507d48e27aa02411af76e6cf))
+
 ### [3.0.3](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.0.0...v3.0.3) (2024-10-28)
 
 ### [3.0.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.0.0...v3.0.2) (2024-10-28)
