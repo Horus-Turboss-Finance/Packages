@@ -30,6 +30,6 @@ export let inAppServiceName = {
 
 export function loadEnv(path:string): void {
   env = load(schema,{ 
-    path
+    path:path
   });
 }
