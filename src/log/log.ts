@@ -1,9 +1,8 @@
 import * as fs from "fs";
 import axios from "axios";
 import { Timepiece } from '../date/date';
-import { loadEnv, env } from "../params/params"
+import { env } from "../params/params"
 
-loadEnv()
 /*
     log inter service
 */
