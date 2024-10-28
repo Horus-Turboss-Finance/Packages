@@ -28,8 +28,8 @@ export let inAppServiceName = {
   index : "INDEX",
 }
 
-export function loadEnv(): void {
+export function loadEnv(path:string): void {
   env = load(schema,{ 
-    path : resolve(__dirname, "../.env")
+    path
   });
 }
