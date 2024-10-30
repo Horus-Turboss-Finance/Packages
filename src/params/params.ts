@@ -1,5 +1,4 @@
 import { EnvType, load } from 'ts-dotenv';
-import { resolve } from "path"
 
 type Env = EnvType<typeof schema>;
 
@@ -8,10 +7,12 @@ const schema = {
   URLDB: String,
   PORT_ADRESSMANAGER: Number,
   IP_ADRESSMANAGER: String,
-  IP_SERVICE_WHITELIST : String
+  IP_SERVICE_WHITELIST : String,
+  NODE_ENV : String
 };
 
 export let env: Env;
+
 export let serviceName = {
   array : ["API", "MAIL", "UTILISATEUR", "ADRESSADMIN"],
   object : {
