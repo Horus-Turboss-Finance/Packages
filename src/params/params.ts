@@ -5,9 +5,14 @@ type Env = EnvType<typeof schema>;
 const schema = {
   WEBHOOK_ERROR_FOR_DISCORD : String,
   URLDB: String,
+
+  PORT_APIGATEWAY : Number,
   PORT_ADRESSMANAGER: Number,
-  IP_ADRESSMANAGER: String,
+
+  IP_APIGATEWAY : String,
+  IP_ADRESSMANAGER : String,
   IP_SERVICE_WHITELIST : String,
+
   NODE_ENV : String
 };
 
