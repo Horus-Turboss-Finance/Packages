@@ -18,6 +18,14 @@ const schema = {
 
 export let env: Env;
 
+export function loadEnv(path:string): Env {
+  env = load(schema,{ 
+    path:path
+  });
+
+  return env
+}
+
 export let serviceName = {
   array : ["API", "MAIL", "UTILISATEUR", "ADRESSADMIN"],
   object : {
@@ -32,10 +40,4 @@ export let inAppServiceName = {
   mongoose : "MONGOOSE",
   app : "APP",
   index : "INDEX",
-}
-
-export function loadEnv(path:string): void {
-  env = load(schema,{ 
-    path:path
-  });
 }
