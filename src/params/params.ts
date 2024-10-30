@@ -10,6 +10,7 @@ const schema = {
   PORT_ADRESSMANAGER: Number,
 
   IP_APIGATEWAY : String,
+  IP_USER_SERVICE : String,
   IP_ADRESSMANAGER : String,
   IP_SERVICE_WHITELIST : String,
 
