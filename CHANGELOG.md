@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.1.0...v3.2.0) (2024-10-30)
+
+
+### Features
+
+* modification du env ([1fe2f02](https://github.com/Horus-Turboss-Finance/Packages/commit/1fe2f028f2f361b69f43f8d08addf538919c81d3))
+* **params:** ajout du NODE_ENV variable ([6a01784](https://github.com/Horus-Turboss-Finance/Packages/commit/6a0178477eb98a24e8d10b4ef0ad3e5884a878ca))
+
+
+### Bug Fixes
+
+* correction params ([2e061ff](https://github.com/Horus-Turboss-Finance/Packages/commit/2e061ffe5735fc2add1dc299fb7721be37f99e0e))
+* correction params ([dc21674](https://github.com/Horus-Turboss-Finance/Packages/commit/dc2167425ebd59739c1f213dab9928ad9840361d))
+* correction params ([ceafab3](https://github.com/Horus-Turboss-Finance/Packages/commit/ceafab335fe8ade7528b1fe106fd8e031f173bbd))
+* corretion bug ([b881cc3](https://github.com/Horus-Turboss-Finance/Packages/commit/b881cc317840852e431f4fed02b1c09473dece06))
+* corretion bug ([0f403d4](https://github.com/Horus-Turboss-Finance/Packages/commit/0f403d48b98a6007777576d7bbda86b6370f5fe5))
+* **params:** correction du env qui ne se charge pas ([483be33](https://github.com/Horus-Turboss-Finance/Packages/commit/483be33fd2c6d9be283616dc759a550b6cc7bae5))
+
 ## [3.1.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.0.4...v3.1.0) (2024-10-28)
 
 
