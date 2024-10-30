@@ -83,6 +83,7 @@ Cette fonction a pour but de charger les variables d'environnement dans la varia
 | IP_SERVICE_WHITELIST      | `String` |
 | PORT_ADRESSMANAGER        | `Number` |
 | IP_ADRESSMANAGER          | `String` |
+| NODE_ENV                  | `String` |
 | URLDB                     | `String` |
 
 #### serviceName
