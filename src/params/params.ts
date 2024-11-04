@@ -9,6 +9,8 @@ const schema = {
   PORT_APIGATEWAY : Number,
   PORT_ADRESSMANAGER: Number,
 
+  PASSWORD_SERVICE : String,
+
   IP_APIGATEWAY : String,
   IP_USER_SERVICE : String,
   IP_ADRESSMANAGER : String,
