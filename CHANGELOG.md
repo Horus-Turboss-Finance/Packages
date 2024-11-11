@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.2.0...v3.3.0) (2024-11-11)
+
+
+### Features
+
+* **params:** ajout du password pour sécuriser l'échange entre service ([f21d5f3](https://github.com/Horus-Turboss-Finance/Packages/commit/f21d5f310e296d2916ebd0bc75ad88af5fa704bd))
+* **params:** ajout du token expire params ([315361a](https://github.com/Horus-Turboss-Finance/Packages/commit/315361a596bfda98d16347ee3b478853ea97e311))
+* **params:** ajout sur le config env ([df46ea7](https://github.com/Horus-Turboss-Finance/Packages/commit/df46ea773276f344df5b31f7b0896d7d77a5a1bd))
+
+
+### Bug Fixes
+
+* **log:** modification de la routine d'impression ([ef0e945](https://github.com/Horus-Turboss-Finance/Packages/commit/ef0e945cbbf47658734c02cc143cabf67571d7d2))
+
 ## [3.2.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.1.0...v3.2.0) (2024-10-30)
 
 
