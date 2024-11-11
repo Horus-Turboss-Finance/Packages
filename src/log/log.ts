@@ -160,6 +160,15 @@ export class log {
             fs.writeFile(`${this.pathLog}/${todayFileName}`, JSON.stringify(fileContent) + ",\n", {flag : "a"}, (erro)=>{
                 if(erro) console.log(erro)
             })
+
+            this.getService = 0
+            this.addService = 0
+            this.updateService = 0
+            this.deleteService = 0
+
+            this.errorServices = 0
+            
+            this.infoServ = []
         }
 
         // Routines toutes les 30 mins
