@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
-    "prepare": "husky && npm run build",
+    "prepare": "npm run build",
+    "prepublishOnly": "echo prepub && husky",
     "release": "standard-version",
     "release:patch": "standard-version --release-as patch && npm run postrelease",
     "release:minor": "standard-version --release-as minor && npm run postrelease",
