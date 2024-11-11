@@ -81,7 +81,7 @@ export class log {
                 title, 
 
                 footer : {
-                    text : 'Unknow app err'
+                    text : 'Unknow request err'
                 }
             }]
         })
@@ -105,7 +105,7 @@ export class log {
                 title,
 
                 footer : {
-                    text : 'Unknow app err'
+                    text : `Unknow app err - ${this.service}`
                 }
             }]
         })
