@@ -6,7 +6,7 @@
   "description": "Fonctions utiles à différent services CashEyes",
   "scripts": {
     "prepare": "npm run build",
-    "prepublishOnly": "echo prepub && husky",
+    "prepublishOnly": "husky",
     "release": "standard-version",
     "release:patch": "standard-version --release-as patch && npm run postrelease",
     "release:minor": "standard-version --release-as minor && npm run postrelease",
@@ -32,7 +32,6 @@
   "dependencies": {
     "axios": "^1.7.7",
     "email-validator": "^2.0.4",
-    "tcp-port-used": "^1.0.2",
     "ts-dotenv": "^0.9.1"
   }
 }

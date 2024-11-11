@@ -1,5 +1,5 @@
 import { validate } from "email-validator";
-import { check } from "tcp-port-used";
+let { createServer } = require('node:net');
 
 /**
  * Vérifie si c'est un nombre
@@ -52,20 +52,19 @@ export function emailCheck (entityToCheck : any) : boolean{
  *  
  * main()
  */
-export async function FreePort (IP = "127.0.0.1") : Promise<number> {
-    return new Promise(async (res, rej) => {
-        try{
-            for(let i = 1000; i < 60000; i++){
-                let isFree = await check(i, IP)
-                if(isFree){
-                    res(i)
-                    break
-                }
-            }
-        }catch(e){
-            rej(e)
-        }
-    })
+export async function FreePort () : Promise<number> {
+    let port = 1000
+    
+    const server = createServer();
+    return new Promise(resolve => {
+      server.once('listening', () => {
+        server.close();
+        resolve(port);
+      }).on('error', () => {
+        port += 1;
+        server.listen(port);
+      }).listen(port);
+    });
 }
 
 export function isValidIP  (ip : any) {
