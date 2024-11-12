@@ -10,20 +10,12 @@ export class log {
     private service : string
     private pathLog : string
     private infoServ : Array<string>
-    private getService : number
-    private addService : number
-    private updateService : number
-    private deleteService : number
     private errorServices : number
 
     constructor (CE_Service : string, pathLog : string ) {
         this.service = CE_Service
         this.pathLog = pathLog
 
-        this.getService = 0
-        this.addService = 0
-        this.updateService = 0
-        this.deleteService = 0
         this.errorServices = 0
 
         this.infoServ = []
@@ -86,6 +78,8 @@ export class log {
             }]
         })
         .catch((error) => {});
+
+        this.errorServices ++
     }
 
     UnknowAppError = async (service : string, err ?: Error) => {
@@ -110,6 +104,8 @@ export class log {
             }]
         })
         .catch((error) => {});
+
+        this.errorServices ++
     }
 
     /**
@@ -121,23 +117,8 @@ export class log {
         this.infoServ.push(`[INFO] ${new Timepiece().longTime()} - ${service} : ${info}`)
     }
 
-    Compteur = {
-        GET : () => {
-            this.getService ++
-        },
-        ADD : () => {
-            this.addService ++
-        },
-        UPDATE : () => {
-            this.updateService ++
-        },
-        DELETE : () => {
-            this.deleteService ++
-        }
-    }
-
     private RoutineLogs = () => {
-        if(this.infoServ || this.getService > 0 || this.addService > 0 || this.updateService > 0 || this.deleteService > 0){
+        if(this.infoServ[0] !== undefined){
             let today = new Timepiece().shortDate()
             const arrToday = today.split('/')
             today = arrToday.reverse().join('.')
@@ -149,10 +130,6 @@ export class log {
                     service : this.service
                 },
                 hour : new Timepiece().shortTime(),
-                "GET '/service' " : this.getService,
-                "POST '/service' " : this.addService,
-                "UP '/service' " : this.updateService,
-                "DELETE '/service' " : this.deleteService,
                 errorReport : this.errorServices,
                 ServiceInformation : this.infoServ
             }
@@ -160,11 +137,6 @@ export class log {
             fs.writeFile(`${this.pathLog}/${todayFileName}`, JSON.stringify(fileContent) + ",\n", {flag : "a"}, (erro)=>{
                 if(erro) console.log(erro)
             })
-
-            this.getService = 0
-            this.addService = 0
-            this.updateService = 0
-            this.deleteService = 0
 
             this.errorServices = 0
             
