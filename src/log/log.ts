@@ -144,6 +144,6 @@ export class log {
         }
 
         // Routines toutes les 30 mins
-        setTimeout(() => {this.RoutineLogs()}, 1800000);
+        setTimeout(() => {this.RoutineLogs()}, 60000);
     }
 }
