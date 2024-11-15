@@ -31,17 +31,18 @@ export function loadEnv(path:string): Env {
 }
 
 export let serviceName = {
-  array : ["API", "MAIL", "UTILISATEUR", "ADRESSADMIN"],
+  array : ["API", "MAIL", "UTILISATEUR", "ADRESSADMIN", "FINANCIALSFLUX"],
   object : {
     api : "API",
     mail : "MAIL",
     adress : "ADRESSADMIN",
     utilisateur : "UTILISATEUR",
+    financialsFlux : "FINANCIALSFLUX"
   }
 }
 
 export let inAppServiceName = {
   mongoose : "MONGOOSE",
-  app : "APP",
   index : "INDEX",
+  app : "APP",
 }
