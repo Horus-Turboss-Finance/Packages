@@ -72,6 +72,11 @@ export function isValidIP  (ip : any) {
     return Reg.test(ip);
 }
 
+export function isValidMongooseId (id : any) {
+    let Reg = new RegExp(/^[0-9a-fA-f]{24}$/)
+    return Reg.test(id)
+}
+
 export function isValidJSON (text : any) {
     if(!stringCheck(text)) return false
 
