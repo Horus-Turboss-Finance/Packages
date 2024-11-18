@@ -40,7 +40,6 @@ export function emailCheck (entityToCheck : any) : boolean{
 
 /**
  * Vérifie le premier port libre (après 1k)
- * @param {string} IP
  * @returns {number}
  * 
  * @example
@@ -67,17 +66,33 @@ export async function FreePort () : Promise<number> {
     });
 }
 
-export function isValidIP  (ip : any) {
+/**
+ * Vérifie si c'est une ip valide
+ * @param {string} ip - la valeur à tester
+ * @returns {boolean}
+ */
+export function isValidIP  (ip : any) : boolean {
+    // Regex qui test si c'est un ip qui restre entre 0.0.0.0 et 255.255.255.255
     let Reg = new RegExp(/^(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}/i);
     return Reg.test(ip);
 }
 
-export function isValidMongooseId (id : any) {
+/**
+ * Vérifier si la valeur est un id mongoose valide.
+ * @param {string} id - L'id mongoose à tester 
+ * @returns {boolean}
+ */
+export function isValidMongooseId (id : any) : boolean {
     let Reg = new RegExp(/^[0-9a-fA-f]{24}$/)
     return Reg.test(id)
 }
 
-export function isValidJSON (text : any) {
+/**
+ * Vérifie si la valeur est un json valide
+ * @param {string} text - le texte à tester 
+ * @returns {boolean}
+ */
+export function isValidJSON (text : any) : boolean{
     if(!stringCheck(text)) return false
 
     try{
@@ -95,7 +110,7 @@ export function isValidJSON (text : any) {
  * @param {number} maximumInclude 
  * @returns {boolean}
  */
-export function stringContraint (entityToCheck : any, minimumInclude = 0, maximumInclude = Infinity) : boolean{
+export function stringContraint (entityToCheck : any, minimumInclude : number = 0, maximumInclude : number= Infinity) : boolean{
     return stringCheck(entityToCheck) && entityToCheck.length >= minimumInclude && entityToCheck.length <= maximumInclude
 }
 
@@ -106,7 +121,7 @@ export function stringContraint (entityToCheck : any, minimumInclude = 0, maximu
  * @param {number} maximumInclude 
  * @returns {boolean}
  */
-export function intContraint (entityToCheck : any, minimumInclude = 0, maximumInclude = Infinity) : boolean{
+export function intContraint (entityToCheck : any, minimumInclude : number = 0, maximumInclude : number = Infinity) : boolean{
     return intCheck(entityToCheck) && entityToCheck >= minimumInclude && entityToCheck <= maximumInclude
 }
 
@@ -154,7 +169,13 @@ export function minWidthIntegerContraint (value : any, minLength : number): stri
     return `${ret}${value.toString()}`
 }
 
-export function escapeHtmlContraint(text : string) {
+
+/**
+ * Retire toutes les valeurs qui pourrait donner lieux à une faille xss
+ * @param {string} text - la valeur à tester
+ * @returns {string}
+ */
+export function escapeHtmlContraint(text : string) : string {
     let map : { [key: string]: string }= {
       '&': '&amp;',
       '<': '&lt;',
@@ -168,16 +189,27 @@ export function escapeHtmlContraint(text : string) {
     });
 }
 
+/**
+ *  Vérifie si la valeur donné est une couleur hexadécimale
+ * @param {string} text - La valeur à tester
+ * @returns {boolean}
+ */
+export function IsHexColor (text : any) : boolean{
+    if(!stringCheck(text)) return false
+
+    let Reg = new RegExp(/^#(?:[0-9a-fA-F]{3}){1,2}$/);
+    return Reg.test(text)
+}
 
 /**
  * Function qui permet de formater les réponses au erreurs du validator de mongoose
- * @param message {string} - Le message de base (err.errors.property.message)
- * @param value {any} - La donnée envoyé par l'utilisateur (err.errors.property.value)
- * @param property {string} - la valeur concerné (err.errors.property.path)
- * @param kindValueForProperty {string} - le type de valeur qui aurait dû être (err.errors.property.type)
- * @returns string
+ * @param {string} message - Le message de base (err.errors.property.message)
+ * @param {any} value - La donnée envoyé par l'utilisateur (err.errors.property.value)
+ * @param {string} property - la valeur concerné (err.errors.property.path)
+ * @param {string} kindValueForProperty - le type de valeur qui aurait dû être (err.errors.property.type)
+ * @returns {string}
  */
-export function mongooseMessageErrorFormator (message : string, value : any, property : string, kindValueForProperty : string) {
+export function mongooseMessageErrorFormator (message : string, value : any, property : string, kindValueForProperty : string) : string{
     if(!message.startsWith('Validator')) return message;
 
     return `${property} should be a ${kindValueForProperty}, got "${value}"`
