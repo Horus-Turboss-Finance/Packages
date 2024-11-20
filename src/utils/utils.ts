@@ -1,5 +1,7 @@
+import { createHash } from "crypto";
+import { env } from "../params/params";
+import { createServer } from 'node:net';
 import { validate } from "email-validator";
-let { createServer } = require('node:net');
 
 /**
  * Vérifie si c'est un nombre
@@ -213,4 +215,56 @@ export function mongooseMessageErrorFormator (message : string, value : any, pro
     if(!message.startsWith('Validator')) return message;
 
     return `${property} should be a ${kindValueForProperty}, got "${value}"`
+}
+
+/**
+ * Décode le token et stoque la réponse dans la requête pour être utilisé par les autres controller/middleware/services
+ * @param req - la request de express
+ * @param token - le token de l'utilisateur fourni
+ * @returns {boolean} - Si c'est un token valide ou non
+ */
+export async function decodeUserToken (req : any, token : string) : Promise<boolean> {
+    if(!token) return req.isValidToken = false;
+
+    const tokenParts = token.split(".")
+
+    let userID = tokenParts[0];
+    let validDate = tokenParts[1];
+    let signedProof = tokenParts[2];
+
+    if(!userID || !signedProof || !validDate) return req.isValidToken = false;
+
+    const signature = `${userID}.${validDate}.${env.PASSWORD_SERVICE}`
+    
+    let hash = createHash("sha512");
+    hash.update(signature);
+
+    validDate = Buffer.from(`${validDate}`, 'base64url').toString('utf-8')
+
+    if(hash.digest("base64url") !== signedProof || parseInt(validDate) > Date.now()) return req.isValidToken = false;
+
+    userID = Buffer.from(`${userID}`, 'base64url').toString('utf-8')
+
+    req.userID = userID;
+    return req.isValidToken = true;
+}
+
+/**
+ * Fonction qui permet de générer le token facilement et rapidement
+ * @param {string} id - L'id de l'utilisateur 
+ * @returns {string} Le token généré
+ */
+export async function encodeUserToken (id : string) : Promise<string>{
+    const secondData = Date.now() + env.TOKEN_EXPIRATION
+    
+    const userID = Buffer.from(`${id}`).toString('base64url')
+    const validDate = Buffer.from(`${secondData}`).toString('base64url')
+    
+    const signature = `${userID}.${validDate}.${env.PASSWORD_SERVICE}`
+
+    let hash = createHash("sha512");
+    hash.update(signature)
+    let signedProof = hash.digest("base64url")
+
+    return `${userID}.${validDate}.${signedProof}`
 }
