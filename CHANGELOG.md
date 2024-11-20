@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.3.0...v3.4.0) (2024-11-20)
+
+
+### Features
+
+* **log:** modif temps routines ([8622a2f](https://github.com/Horus-Turboss-Finance/Packages/commit/8622a2f4b6d61d214d808969f81c33f5fbf3788e))
+* **log:** modifications des compteurs ainsi que de la fréquence de message ([a2f3203](https://github.com/Horus-Turboss-Finance/Packages/commit/a2f32039dcccfc852fb97d25f88761f519cef144))
+* **params:** ajout du micro services 'flux financials' ([7d9d0f1](https://github.com/Horus-Turboss-Finance/Packages/commit/7d9d0f17f3a914ccd02116f5bae3cbf814b44359))
+* **utils:** ajout de check hex color & modif doc ([db22347](https://github.com/Horus-Turboss-Finance/Packages/commit/db223476e404505bce49ab01b1705c2a16d3b54b))
+* **utils:** ajout de la fonction de vérification isValidMongooseId ([6d74988](https://github.com/Horus-Turboss-Finance/Packages/commit/6d74988210039f1c4d9a47cff3e2505e816596b4))
+* **utils:** ajout des fonctions pour décoder et créer un token ([348bd68](https://github.com/Horus-Turboss-Finance/Packages/commit/348bd68fe68d250612a987dc239362f834d8e901))
+
+
+### Bug Fixes
+
+* modif log discord when error unknow app ([9211113](https://github.com/Horus-Turboss-Finance/Packages/commit/92111134df67e81f374896c4fe9aa71986d890e0))
+* problème lors de l'installation ([2e62821](https://github.com/Horus-Turboss-Finance/Packages/commit/2e62821b3c3d00edce7fbd86fdbdde44c9bbae77))
+* **utils:** bug avec FreePort corrigé ([28c53e0](https://github.com/Horus-Turboss-Finance/Packages/commit/28c53e01c966238c6072c8e7fbc6e60252cee8eb))
+
 ## [3.3.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.2.0...v3.3.0) (2024-11-11)
 
 
