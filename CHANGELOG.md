@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.4.0...v3.5.0) (2024-11-20)
+
+
+### Features
+
+* **utils:** ajout de la fonction catchsync ([a6f2e3b](https://github.com/Horus-Turboss-Finance/Packages/commit/a6f2e3bb53884630f266128f351e0b9849f36033))
+
 ## [3.4.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.3.0...v3.4.0) (2024-11-20)
 
 
