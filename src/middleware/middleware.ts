@@ -27,7 +27,7 @@ export const controleOrigine = catchSync(async (req : any, res : any, next : any
   let NodeProd = env.NODE_ENV
   
 
-  if(NodeProd!== "PRODUCTION") return next()
+  if(NodeProd !== "PRODUCTION") return next()
   let socketAddr = req.socket ? req.socket.remoteAddress : req.ip
   let proxyAddrs = req.headers['host']
 
@@ -52,7 +52,7 @@ export const isAuth = catchSync(async (req : any, res : any, next : any) => {
 
   if(!token) token = req.headers.token
 
-  await decodeUserToken(req, token);
+  decodeUserToken(req, token);
   // if(`${req.baseUrl}`.includes("password")){
   //   user = await User.findById(data.id).select("+password");
   // }else{
