@@ -268,7 +268,3 @@ export async function encodeUserToken (id : string) : Promise<string>{
 
     return `${userID}.${validDate}.${signedProof}`
 }
-
-export const catchSync = (errorFunction : any) => (req : any, res : any, next : any) => {
-    Promise.resolve(errorFunction(req, res, next)).catch(next);
-}
