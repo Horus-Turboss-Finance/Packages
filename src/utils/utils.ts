@@ -146,6 +146,15 @@ export function noFutureDateContraint (entityToCheck : any) : boolean{
 }
 
 /**
+ * Vérifie si l'entité est une date qui n'est pas passé
+ * @param {any} entityToCheck 
+ * @returns {boolean}
+ */
+export function noPastDateContraint (entityToCheck : any) : boolean{
+    return dateCheck(entityToCheck) && Math.floor(new Date(entityToCheck).getTime() / 1000) > Math.floor(Date.now() / 1000)
+}
+
+/**
  * Ajoute des 0 si la longueur de la chaine est inférieur à minLength
  * @example 
  * // retourne "01"
