@@ -19,8 +19,8 @@ export const catchSync = (errorFunction : any) => async (req : any, res : any, n
  * @returns 
  */
 export const controleOrigine = catchSync(async (req : any, res : any, next : any) => {
-  let env = req.get("envLoad")
-  let LogSys = req.get("logSys")
+  let env = req.app.get("envLoad")
+  let LogSys = req.app.get("logSys")
   if(!env || !LogSys) throw new Error("N'oubliez pas de charger les variables `logSys` et `envLoad` avec app.set")
 
   let ipWhiteList = env.IP_SERVICE_WHITELIST.split(';');
@@ -37,7 +37,7 @@ export const controleOrigine = catchSync(async (req : any, res : any, next : any
   if(! trust) trust = req.headers.trust
 
   if(!addr.some(item => ipWhiteList.includes(item ?? "")) && (trust == req.env.PASSWORD_SERVICE)) {
-    LogSys.ServiceInfo(inAppServiceName.app, `User : "${addr[0] ?? "NOT FOUND"} try to use service registery`)
+    LogSys.ServiceInfo(inAppServiceName.app, `User : "${addr[0] ?? "NOT FOUND"} try to use service without api gateway`)
     throw new ResponseException("Vous n'êtes pas abilité à utiliser cette ressource.").Forbidden()
   }
   next()
