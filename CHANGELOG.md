@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.5.0...v3.6.0) (2024-11-28)
+
+
+### Features
+
+* **adressManager:** ajout des fonctions adressManager ([83228d8](https://github.com/Horus-Turboss-Finance/Packages/commit/83228d88a506dd12db87e483ef224792a1c74150))
+* **adressManager:** ajout des fonctions adressManager ([3118ec3](https://github.com/Horus-Turboss-Finance/Packages/commit/3118ec37bf97c373d71b75202c3679c1bb4455c9))
+* **middleware:** déplacement des middlewares fréquent vers package ([5925977](https://github.com/Horus-Turboss-Finance/Packages/commit/59259770c69d451b81f9b972a7e581446234e6ab))
+* **params:** ajout de l'ip du service financier ([6f5bb37](https://github.com/Horus-Turboss-Finance/Packages/commit/6f5bb37f0fa9a8693ee968d328c081bd19294541))
+* **utils:** ajout de la fonction de contrainte date passé ([5046e2d](https://github.com/Horus-Turboss-Finance/Packages/commit/5046e2de2f9f1af1d924ff97391c0dd487ebd722))
+
+
+### Bug Fixes
+
+* **middleware:** correction pour le middleware controle origine ([c171457](https://github.com/Horus-Turboss-Finance/Packages/commit/c171457e0f074ee1a70d125530c324ccd24d5ca4))
+* **utils:** correction async freePort ([b7622f2](https://github.com/Horus-Turboss-Finance/Packages/commit/b7622f2385986cde2a8f9bfb9e544bcfc4ad17c4))
+* **utils:** correction freeport ([9f8c502](https://github.com/Horus-Turboss-Finance/Packages/commit/9f8c5023f54e7de9216fa7ccdd927bef1adbebc8))
+* **utils:** encore freeport ([06cd5c5](https://github.com/Horus-Turboss-Finance/Packages/commit/06cd5c59d1f852b8e00ee7ee4f9260a681609dd7))
+* **utils:** oui encore freeport ([4893d87](https://github.com/Horus-Turboss-Finance/Packages/commit/4893d87bfd9f2bf270b51247d712407f50b25637))
+
 ## [3.5.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.4.0...v3.5.0) (2024-11-20)
 
 
