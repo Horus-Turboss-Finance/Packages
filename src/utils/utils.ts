@@ -57,8 +57,9 @@ export async function FreePort () : Promise<number> {
     let port = 1000
     
     const server = createServer();
+    server.listen(port)
     return new Promise(resolve => {
-      server.once('listening', () => {
+      server.once('listening', async () => {
         server.close();
         resolve(port);
       }).on('error', () => {
