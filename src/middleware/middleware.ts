@@ -86,7 +86,9 @@ export const ResponseProtocole = (err : Error & any, req : any, res : any, next 
  * @param next - La nextFunction express
  */
 export const LogRequest = (req : any, res : any, next : any) => {
-  const text = `${req.method} : ${req.baseUrl} | body : ${req.body} ; header : ${req.headers} | query : ${req.query}`
+  next()
+
+  const text = `${req.method} : ${req.originalUrl} | body : ${JSON.stringify(req.body)} ; header : ${JSON.stringify(req.headers)} | query : ${JSON.stringify(req.query)}`;
   if(!req.app.get("logSys")) throw new Error("Il faut configurer les logs sur la plage \"logSys\"");
 
   let logSys = req.app.get("logSys")
