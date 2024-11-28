@@ -54,17 +54,19 @@ export function emailCheck (entityToCheck : any) : boolean{
  * main()
  */
 export async function FreePort () : Promise<number> {
-    let port = 1000
-    
     const server = createServer();
-    return new Promise(resolve => {
-      server.once('listening', () => {
-        server.close();
-        resolve(port);
-      }).on('error', () => {
-        port += 1;
-        server.listen(port);
-      }).listen(port);
+    return new Promise((res, rej) => {
+        server.on('error', (err)=> rej(err))
+
+        server.listen(0, () => {
+            /* @ts-ignore */
+            let port = server.address().port;
+
+            server.close()
+
+            if(!port) rej(new Error("Pas de port disponible"))
+            else res(port)
+        });
     });
 }
 
