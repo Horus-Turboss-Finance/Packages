@@ -12,6 +12,7 @@ const schema = {
   PASSWORD_SERVICE : String,
   TOKEN_EXPIRATION : Number,
 
+  IP_FINANCIAL : String,
   IP_APIGATEWAY : String,
   IP_USER_SERVICE : String,
   IP_ADRESSMANAGER : String,
