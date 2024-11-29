@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.6.0...v3.7.0) (2024-11-29)
+
+
+### Features
+
+* **date:** ajout de la fonction monthOnly ([1b8737e](https://github.com/Horus-Turboss-Finance/Packages/commit/1b8737e0916caf578fbce4292e12d128d7f196bb))
+* **utils:** ajout du support pour les erreurs cast to mongoose ([d8a2bf4](https://github.com/Horus-Turboss-Finance/Packages/commit/d8a2bf4568c50c223831044b6dabc145c22d5120))
+
+
+### Bug Fixes
+
+* **middleware:** logRequest bug fix ([78ae310](https://github.com/Horus-Turboss-Finance/Packages/commit/78ae3102faa011c7c291313668a6890159e863c0))
+* **utils:** correction erreur logique in decode user token ([6503076](https://github.com/Horus-Turboss-Finance/Packages/commit/6503076f9826f0defdb62e8ea51846198e505137))
+* **utils:** correction logique error mongoose ([01c2cd7](https://github.com/Horus-Turboss-Finance/Packages/commit/01c2cd7ec9a5842d6f002abc24d7390068e9a665))
+
 ## [3.6.0](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.5.0...v3.6.0) (2024-11-28)
 
 
