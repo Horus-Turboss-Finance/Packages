@@ -66,6 +66,9 @@ let formatTrad = {
         classified : (day : number, month : number, year : number) => {
             return `${year}.${minWidthIntegerContraint(month, 2)}.${minWidthIntegerContraint(day, 2)}`
         },
+        monthOnly : (month : number, year : number) => {
+            return `${minWidthIntegerContraint(month, 2)}/${year}}`
+        }
     }, en : {
         ListMois : [
             "January",
@@ -125,6 +128,9 @@ let formatTrad = {
         classified : (day : number, month : number, year : number) => {
             return `${year}.${minWidthIntegerContraint(month, 2)}.${minWidthIntegerContraint(day, 2)}`
         },
+        monthOnly : (month : number, year : number) => {
+            return `${minWidthIntegerContraint(month, 2)}/${year}}`
+        }
     }
 }
 
@@ -163,11 +169,11 @@ export class Timepiece {
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `Il y a 5 minutes` 
      * @example `Dans 5 heures` 
      */
-    Relative = () => {
+    Relative = () : string => {
         let diff = this.now - this.time
         let relative = formatTrad[this.lang as keyof typeof formatTrad].relative
         let response, comming
@@ -209,77 +215,86 @@ export class Timepiece {
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `10:03` // French
      * @example `10:03 PM` // English
      */
-    shortTime = () => {
+    shortTime = () : string => {
         let shorttime = formatTrad[this.lang as keyof typeof formatTrad].shortTime
         return shorttime(this.hour, this.minutes)
     }
 
    /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `10:03:54 PM` // English
      * @example `10:03:54` // French
      */
-    longTime = () => {
+    longTime = () : string => {
         let longtime = formatTrad[this.lang as keyof typeof formatTrad].longTime
         return longtime(this.hour, this.minutes, this.seconde)
     }
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `10/23/2024` // english 
      * @example `23/10/2024` // french 
      */
-    shortDate = () => {
+    shortDate = () : string => {
         let shortDate = formatTrad[this.lang as keyof typeof formatTrad].shortDate
         return shortDate(this.day, this.month, this.year)
     }
 
      /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `10 april, 2024` // english 
      * @example `10 avril 2024` // french 
      */
-    longDate = () => {
+    longDate = () : string => {
         let longDate = formatTrad[this.lang as keyof typeof formatTrad].longDate
         return longDate(this.day, this.month, this.year)
     }
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `28 april, 2024 02:04 PM` // english
      * @example `28 avril 2024 14:04` // french
      */
-    shortDateTime = () => {
+    shortDateTime = () : string => {
         let shortDateTime = formatTrad[this.lang as keyof typeof formatTrad].shortDateTime
         return shortDateTime(this.day, this.month, this.year, this.hour, this.minutes)
     }
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `Sunday, 28 april, 2024 02:04 PM` // english
      * @example `Dimanche 28 avril 2024 14:04` // french
      */
-    longDateTime = () => {
+    longDateTime = () : string => {
         let longDateTime = formatTrad[this.lang as keyof typeof formatTrad].longDateTime
         return longDateTime(this.day, this.month, this.year, this.hour, this.minutes, this.dateDay)
     }
 
     /**
      * 
-     * @returns string
+     * @returns {string}
      * @example `2024.04.28`
      */
-    classified = () => {
+    classified = () : string => {
         let classified = formatTrad[this.lang as keyof typeof formatTrad].classified
         return classified(this.day, this.month, this.year)
+    }
+
+    /**
+     * @returns {string}
+     * @example `01/2024`
+     */
+    monthOnly = () : string => {
+        let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].monthOnly
+        return monthOnly(this.month, this.year)
     }
 }
