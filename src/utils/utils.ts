@@ -252,7 +252,7 @@ export async function decodeUserToken (req : any, token : string) : Promise<bool
 
     validDate = Buffer.from(`${validDate}`, 'base64url').toString('utf-8')
 
-    if(hash.digest("base64url") !== signedProof || parseInt(validDate) > Date.now()) return req.isValidToken = false;
+    if(hash.digest("base64url") !== signedProof || parseInt(validDate) < Date.now()) return req.isValidToken = false;
 
     userID = Buffer.from(`${userID}`, 'base64url').toString('utf-8')
 
