@@ -223,7 +223,7 @@ export function IsHexColor (text : any) : boolean{
  * @returns {string}
  */
 export function mongooseMessageErrorFormator (message : string, value : any, property : string, kindValueForProperty : string) : string{
-    if(!message.startsWith('Validator')) return message;
+    if(!message.startsWith('Validator') || !message.startsWith('Cast')) return message;
 
     return `${property} should be a ${kindValueForProperty}, got "${value}"`
 }
