@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.3](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.7.2...v3.7.3) (2024-11-30)
+
+
+### Bug Fixes
+
+* **date:** correction écriture monthOnly ([41d9acc](https://github.com/Horus-Turboss-Finance/Packages/commit/41d9acc918e60cf26fb9ac9901f65ea7e9700551))
+
 ### [3.7.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.7.1...v3.7.2) (2024-11-30)
 
 
