@@ -36,7 +36,7 @@ export const controleOrigine = catchSync(async (req : any, res : any, next : any
   let { trust } =  req.body;
   if(! trust) trust = req.headers.trust
 
-  if(!addr.some(item => ipWhiteList.includes(item ?? "")) && (trust == req.env.PASSWORD_SERVICE)) {
+  if(!addr.some(item => ipWhiteList.includes(item ?? "")) && (trust !== env.PASSWORD_SERVICE)) {
     LogSys.ServiceInfo(inAppServiceName.app, `User : "${addr[0] ?? "NOT FOUND"} try to use service without api gateway`)
     throw new ResponseException("Vous n'êtes pas abilité à utiliser cette ressource.").Forbidden()
   }
