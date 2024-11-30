@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.7.2](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.7.1...v3.7.2) (2024-11-30)
+
+
+### Bug Fixes
+
+* **middleware:** correction de logique dans controleOrigine ([2500f2a](https://github.com/Horus-Turboss-Finance/Packages/commit/2500f2a8c605ab10135fc09d6cbba7f7712f911a))
+
 ### [3.7.1](https://github.com/Horus-Turboss-Finance/Packages/compare/v3.7.0...v3.7.1) (2024-11-29)
 
 
