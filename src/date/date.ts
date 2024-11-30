@@ -67,7 +67,7 @@ let formatTrad = {
             return `${year}.${minWidthIntegerContraint(month + 1, 2)}.${minWidthIntegerContraint(day + 1, 2)}`
         },
         monthOnly : (month : number, year : number) => {
-            return `${minWidthIntegerContraint(month + 1, 2)}/${year}}`
+            return `${minWidthIntegerContraint(month + 1, 2)}/${year}`
         }
     }, en : {
         ListMois : [
@@ -129,7 +129,7 @@ let formatTrad = {
             return `${year}.${minWidthIntegerContraint(month + 1, 2)}.${minWidthIntegerContraint(day, 2)}`
         },
         monthOnly : (month : number, year : number) => {
-            return `${minWidthIntegerContraint(month + 1, 2)}/${year}}`
+            return `${minWidthIntegerContraint(month + 1, 2)}/${year}`
         }
     }
 }
