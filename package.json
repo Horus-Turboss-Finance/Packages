@@ -3,7 +3,7 @@
   "author": "Docteur-Turboss <docteur.turboss@gmail.com>",
   "version": "3.7.3",
   "main": "./dist/index.js",
-  "description": "Fonctions utiles à différent services CashEyes",
+  "description": "Fonctions utiles à différent services CashSight",
   "scripts": {
     "prepare": "npm run build",
     "prepublishOnly": "husky",
@@ -26,7 +26,6 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@types/tcp-port-used": "^1.0.4",
     "husky": "^9.1.4"
   },
   "dependencies": {

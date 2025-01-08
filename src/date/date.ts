@@ -149,7 +149,7 @@ export class Timepiece {
     private seconde : number
     private dateDay : number
 
-    constructor(lang = "fr", date?:number){
+    constructor(date?:number, lang = "fr"){
         if(!date) date = Date.now()
         if(!dateCheck(date)) throw new Error("DateSelector must be number")
 

@@ -72,7 +72,7 @@ export const ResponseProtocole = (err : Error & any, req : any, res : any, next 
     let logSys = req.app.get("logSys")
     if(!logSys) throw new Error("Veuillez charger les `logSys` avec app.set")
 
-    logSys.UnknowRequestError(req.method, req.protocol, req.originalUrl, JSON.stringify(req.params), JSON.stringify(req.body), JSON.stringify(req.cookies), JSON.stringify(req.headers), logErr)
+    logSys.UnknowRequestError(req, logErr)
   }
 
   return res.status(err.status).json(err)
@@ -92,6 +92,6 @@ export const LogRequest = (req : any, res : any, next : any) => {
   if(!req.app.get("logSys")) throw new Error("Il faut configurer les logs sur la plage \"logSys\"");
 
   let logSys = req.app.get("logSys")
-  if(!logSys) throw new Error("Veuillez charger ")
+  if(!logSys) throw new Error("Veuillez charger le logSys dans `app.set(\"logSys\", logSys)`")
   logSys.ServiceInfo(inAppServiceName.app, text)
 }

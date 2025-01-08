@@ -25,16 +25,11 @@ export class log {
 
     /**
      * Cette méthode permet de logguer en tâche de fond l'erreur
-     * @param method {string} - la méthode (get, post, put, etc)
-     * @param protocol {string} - http ou https
-     * @param originalUrl {string} - L'url originale de la requête
-     * @param params {string} - les paramètres de requête
-     * @param body {string} - Le corps de requête
-     * @param cookies {string} - les cookies de requête
-     * @param headers {string} - l'en tête de requete
+     * @param req {any} - requete
      * @param err {Error} - L'erreur actuellement en cause
      */
-    UnknowRequestError = async (method : string, protocol : string, originalUrl : string, params : string, body : string, cookies : string, headers : string, err ?: Error) => {
+    UnknowRequestError = async (req : any, err ?: Error) => {
+        let method = req.method, protocol = req.protocol, originalUrl = req.originalUrl, params = JSON.stringify(req.params), body = JSON.stringify(req.body), cookies = JSON.stringify(req.cookies), headers = JSON.stringify(req.headers)
         let title = "UnknowError :"
         let description = "No error params provided"
         if(err){
