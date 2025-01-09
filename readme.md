@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Packages</h1>
   <h6>Fonctions utiles sur plusieurs modules de cash sight.</h6>
-  <a href="https://github.com/Horus-Turboss-Finance/package/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Horus-Turboss-Finance/package?style=for-the-badge" /></a>
+  <a href="https://github.com/Horus-Turboss-Finance/packages/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Horus-Turboss-Finance/packages?style=for-the-badge" /></a>
 </div>
 
 ### Table des matières
