@@ -38,7 +38,7 @@ export let serviceName = {
     mail : "MAIL",
     adress : "ADRESSADMIN",
     utilisateur : "UTILISATEUR",
-    financialsFlux : "FINANCIALSFLUX"
+    flux : "FINANCIALSFLUX"
   }
 }
 
