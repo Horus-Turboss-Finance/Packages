@@ -21,7 +21,7 @@ export const AddressManagerAsk = async (service : string, env : any, ip : any) :
     }
   })
 
-  let data : any = urlData.data.data
+  let data : any = JSON.parse(urlData.data.data)
 
   if(!data) throw new ResponseException().UnknownError()
   return `http://${data.adressIP}:${data.port}`
