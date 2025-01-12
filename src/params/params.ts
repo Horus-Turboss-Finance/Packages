@@ -18,6 +18,8 @@ const schema = {
   IP_ADRESSMANAGER : String,
   IP_SERVICE_WHITELIST : String,
 
+  MACHINE_IP : String,
+
   NODE_ENV : String
 };
 

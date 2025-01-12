@@ -8,7 +8,7 @@ import { ResponseException } from "../responseHandler/responseException";
  * @param env - Les paramètres env pour récupérer `IP_ADRESSMANAGER` et `PORT_ADRESSMANAGER`
  * @returns {string}
  */
-export const AddressManagerAsk = async (service : string, env : any) : Promise<string> => {
+export const AddressManagerAsk = async (service : string, env : any, ip : any) : Promise<string> => {
   if(!serviceName.array.includes(service)) throw new ResponseException("Le service demandé n'existe pas").BadRequest();
 
   let urlData = await axios({
@@ -16,7 +16,8 @@ export const AddressManagerAsk = async (service : string, env : any) : Promise<s
     baseURL: `http://${env.IP_ADRESSMANAGER}:${env.PORT_ADRESSMANAGER}`,
     method: 'get',
     data: {
-      service
+      service,
+      ip
     }
   })
 
