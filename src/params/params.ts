@@ -39,7 +39,7 @@ export let serviceName = {
     api : "API",
     mail : "MAIL",
     adress : "ADRESSADMIN",
-    utilisateur : "UTILISATEUR",
+    user : "UTILISATEUR",
     flux : "FINANCIALSFLUX"
   }
 }
