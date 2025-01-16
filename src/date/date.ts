@@ -359,9 +359,9 @@ export class Timepiece {
      * @returns {string}
      * @example `Aug 2024`
      */
-    MiddleMonthOnly = () : string => {
-        let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].middleMonthOnly
-        return monthOnly(this.month, this.year)
+    middleMonthOnly = () : string => {
+        let middleMonthOnly = formatTrad[this.lang as keyof typeof formatTrad].middleMonthOnly
+        return middleMonthOnly(this.month, this.year)
     }
 
     /**
@@ -369,8 +369,8 @@ export class Timepiece {
      * @example `Janvier 2024` // french only
      * @example `Juanary 2024` // english only
      */
-    LongMonthOnly = () : string => {
-        let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].middleMonthOnly
-        return monthOnly(this.month, this.year)
+    longMonthOnly = () : string => {
+        let longMonthOnly = formatTrad[this.lang as keyof typeof formatTrad].longMonthOnly
+        return longMonthOnly(this.month, this.year)
     }
 }
