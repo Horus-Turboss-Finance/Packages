@@ -12,6 +12,20 @@ let heuresLength = 60
 let jourLength = 24
 let formatTrad = {
     fr : {
+        ShortListMois : [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ],
         ListMois : [
             "Janvier",
             "Février",
@@ -54,6 +68,9 @@ let formatTrad = {
         shortDate : (day : number, month : number, year : number) => {
             return `${minWidthIntegerContraint(day, 2)}/${minWidthIntegerContraint(month + 1, 2)}/${year}`
         },
+        middleDate : (day : number, month : number, year : number) => {
+            return `${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ShortListMois[month]}, ${year}`
+        },
         longDate : (day : number, month : number, year : number) => {
             return `${minWidthIntegerContraint(day, 2)} ${formatTrad.fr.ListMois[month]} ${year}`
         },
@@ -68,8 +85,28 @@ let formatTrad = {
         },
         monthOnly : (month : number, year : number) => {
             return `${minWidthIntegerContraint(month + 1, 2)}/${year}`
-        }
+        },
+        middleMonthOnly : (month : number, year : number) => {
+            return `${formatTrad.fr.ShortListMois[month]} ${year}`
+        },
+        longMonthOnly : (month : number, year : number) => {
+            return `${formatTrad.fr.ListMois[month]} ${year}`
+        },
     }, en : {
+        ShortListMois : [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ],
         ListMois : [
             "January",
             "February",
@@ -114,6 +151,9 @@ let formatTrad = {
         shortDate : (day : number, month : number, year : number) => {
             return `${minWidthIntegerContraint(month + 1, 2)}/${minWidthIntegerContraint(day, 2)}/${year}`
         },
+        middleDate : (day : number, month : number, year : number) => {
+            return `${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ShortListMois[month]}, ${year}`
+        },
         longDate : (day : number, month : number, year : number) => {
             return `${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year}`
         },
@@ -130,7 +170,13 @@ let formatTrad = {
         },
         monthOnly : (month : number, year : number) => {
             return `${minWidthIntegerContraint(month + 1, 2)}/${year}`
-        }
+        },
+        middleMonthOnly : (month : number, year : number) => {
+            return `${formatTrad.en.ShortListMois[month]} ${year}`
+        },
+        longMonthOnly : (month : number, year : number) => {
+            return `${formatTrad.en.ListMois[month]} ${year}`
+        },
     }
 }
 
@@ -246,6 +292,17 @@ export class Timepiece {
         return shortDate(this.day, this.month, this.year)
     }
 
+    /**
+     * 
+     * @returns {string}
+     * @example `10 Apr, 2024` // english 
+     * @example `10 Aug 2024` // french 
+     */
+    middleDate = () : string => {
+        let middleDate = formatTrad[this.lang as keyof typeof formatTrad].middleDate
+        return middleDate(this.day, this.month, this.year)
+    }
+
      /**
      * 
      * @returns {string}
@@ -295,6 +352,25 @@ export class Timepiece {
      */
     monthOnly = () : string => {
         let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].monthOnly
+        return monthOnly(this.month, this.year)
+    }
+
+    /**
+     * @returns {string}
+     * @example `Aug 2024`
+     */
+    MiddleMonthOnly = () : string => {
+        let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].middleMonthOnly
+        return monthOnly(this.month, this.year)
+    }
+
+    /**
+     * @returns {string}
+     * @example `Janvier 2024` // french only
+     * @example `Juanary 2024` // english only
+     */
+    LongMonthOnly = () : string => {
+        let monthOnly = formatTrad[this.lang as keyof typeof formatTrad].middleMonthOnly
         return monthOnly(this.month, this.year)
     }
 }
