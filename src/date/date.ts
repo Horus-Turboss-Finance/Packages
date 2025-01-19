@@ -41,13 +41,13 @@ let formatTrad = {
             "Décembre"
         ],
         ListWeek : [
+            "Dimanche",
             'Lundi',
             "Mardi",
             "Mercredi",
             "Jeudi",
             "Vendredi",
             "Samedi",
-            "Dimanche"
         ],
         relative : {
             before : (time : number, type : string) => {
@@ -78,7 +78,7 @@ let formatTrad = {
             return `${minWidthIntegerContraint(day, 2)} ${formatTrad.fr.ListMois[month]} ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)}`
         },
         longDateTime : (day : number, month : number, year : number, hour : number, minute : number, dateDay : number) => {
-             return `${formatTrad.fr.ListWeek[dateDay - 1]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.fr.ListMois[month]} ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)}`
+             return `${formatTrad.fr.ListWeek[dateDay]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.fr.ListMois[month]} ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)}`
         },
         classified : (day : number, month : number, year : number) => {
             return `${year}.${minWidthIntegerContraint(month + 1, 2)}.${minWidthIntegerContraint(day, 2)}`
@@ -122,13 +122,13 @@ let formatTrad = {
             "December"
         ],
         ListWeek : [
+            "Sunday",
             "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday",
             "Saturday",
-            "Sunday"
         ], 
         relative : {
             before : (time : number, type : string) => {
@@ -162,8 +162,8 @@ let formatTrad = {
             return `${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)} AM`
         },
         longDateTime : (day : number, month : number, year : number, hour : number, minute : number, dateDay : number) => {
-            if(hour > 12) return `${formatTrad.en.ListWeek[dateDay - 1]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year} ${minWidthIntegerContraint(hour - 12, 2)}:${minWidthIntegerContraint(minute, 2)} PM`
-            return `${formatTrad.en.ListWeek[dateDay - 1]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)} AM`
+            if(hour > 12) return `${formatTrad.en.ListWeek[dateDay]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year} ${minWidthIntegerContraint(hour - 12, 2)}:${minWidthIntegerContraint(minute, 2)} PM`
+            return `${formatTrad.en.ListWeek[dateDay]}, ${minWidthIntegerContraint(day, 2)} ${formatTrad.en.ListMois[month]}, ${year} ${minWidthIntegerContraint(hour, 2)}:${minWidthIntegerContraint(minute, 2)} AM`
         },
         classified : (day : number, month : number, year : number) => {
             return `${year}.${minWidthIntegerContraint(month + 1, 2)}.${minWidthIntegerContraint(day, 2)}`
