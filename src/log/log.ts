@@ -64,8 +64,8 @@ export class log {
                 timestamp: new Date().toISOString(),
                 color : 984148,
 
-                description : description.toString(),
-                title : title.toString(), 
+                description : description?.toString(),
+                title : title?.toString(), 
 
                 footer : {
                     text : 'Unknow request err'
